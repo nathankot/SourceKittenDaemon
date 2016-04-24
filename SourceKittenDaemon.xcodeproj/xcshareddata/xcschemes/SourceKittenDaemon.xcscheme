@@ -49,6 +49,16 @@
             value = "$(PROJECT_FILE_PATH)"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "400K_FIXTURE_PROJECT_DIR"
+            value = "$(PROJECT_DIR)/SourceKittenDaemonTests/Fixtures/400k-problem"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "400K_FIXTURE_PROJECT_FILE_PATH"
+            value = "$(PROJECT_DIR)/SourceKittenDaemonTests/Fixtures/400k-problem/demo.xcodeproj"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>

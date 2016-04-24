@@ -86,4 +86,22 @@ class CompleterTests : XCTestCase {
         }
     }
 
+    func test400KProblem() {
+        var expectation = expectationWithDescription("fetch is fast")
+        defer { waitForExpectationsWithTimeout(3.0, handler: nil) }
+
+        dispatch_async(dispatch_queue_create("com.sourcekittend.async.test", DISPATCH_QUEUE_SERIAL)) {
+            let project = try! Project(
+                type: ProjectType.Project(project: c400KXcodeprojFixturePath()),
+                configuration: "Debug")
+
+            let completer = Completer(project: project)
+            let result = completer.complete(
+                            NSURL(fileURLWithPath: c400KMainFixturePath()),
+                            offset: 28)
+
+            expectation.fulfill()
+        }
+    }
+
 }

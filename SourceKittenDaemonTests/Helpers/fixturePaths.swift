@@ -34,3 +34,15 @@ public func completeImportFixturePath() -> String {
     return environment["FIXTURE_PROJECT_DIR"]! +
             "/SourceKittenDaemonTests/Fixtures/CompleteImportFixture.swift"
 }
+
+public func c400KProjectDirFixturePath() -> String {
+    return environment["400K_FIXTURE_PROJECT_DIR"]!
+}
+
+public func c400KXcodeprojFixturePath() -> String {
+    return environment["400K_FIXTURE_PROJECT_FILE_PATH"]!
+}
+
+public func c400KMainFixturePath() -> String {
+    return c400KProjectDirFixturePath() + "/demo/main.swift"
+}
